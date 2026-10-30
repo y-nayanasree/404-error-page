@@ -1,0 +1,218 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #29264a;
+  background:
+    radial-gradient(circle at 15% 15%, #e7ddff, transparent 35%),
+    linear-gradient(135deg, #f8f6ff, #edf3ff);
+}
+
+.error-container {
+  width: 100%;
+  max-width: 620px;
+  padding: 42px 30px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid #e9e3ff;
+  border-radius: 26px;
+  box-shadow: 0 18px 55px rgba(62, 47, 125, 0.12);
+}
+
+.illustration {
+  position: relative;
+  width: 210px;
+  height: 175px;
+  margin: 0 auto 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.planet {
+  position: relative;
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #a88bff, #6945dc);
+  box-shadow: inset -12px -10px 0 rgba(47, 27, 125, 0.16),
+              0 12px 25px rgba(105, 69, 220, 0.22);
+  z-index: 2;
+}
+
+.crater {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.crater-one {
+  width: 20px;
+  height: 20px;
+  top: 22px;
+  left: 22px;
+}
+
+.crater-two {
+  width: 12px;
+  height: 12px;
+  top: 58px;
+  left: 61px;
+}
+
+.crater-three {
+  width: 9px;
+  height: 9px;
+  top: 19px;
+  left: 69px;
+}
+
+.orbit {
+  position: absolute;
+  width: 175px;
+  height: 65px;
+  border: 2px solid rgba(112, 72, 232, 0.35);
+  border-radius: 50%;
+}
+
+.orbit-one {
+  transform: rotate(-25deg);
+}
+
+.orbit-two {
+  transform: rotate(35deg);
+  border-color: rgba(255, 166, 91, 0.5);
+}
+
+.star {
+  position: absolute;
+  color: #ffae42;
+  font-size: 24px;
+}
+
+.star-one {
+  top: 12px;
+  left: 15px;
+}
+
+.star-two {
+  right: 14px;
+  top: 37px;
+  font-size: 30px;
+  color: #9b83f5;
+}
+
+.star-three {
+  bottom: 5px;
+  left: 42px;
+  font-size: 17px;
+}
+
+.floating {
+  position: absolute;
+  right: 26px;
+  bottom: 13px;
+  z-index: 3;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #ffad5c;
+  color: white;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.error-label {
+  color: #7655db;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  margin-bottom: 5px;
+}
+
+h1 {
+  color: #6745d6;
+  font-size: clamp(82px, 17vw, 125px);
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: -5px;
+  text-shadow: 4px 5px 0 #e9e2ff;
+}
+
+h2 {
+  font-size: clamp(24px, 5vw, 32px);
+  margin-top: 13px;
+  color: #29264a;
+}
+
+.message {
+  max-width: 390px;
+  margin: 14px auto 25px;
+  color: #77758b;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.home-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 14px 24px;
+  border-radius: 12px;
+  background: #7048e8;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  box-shadow: 0 7px 18px rgba(112, 72, 232, 0.23);
+  transition: transform 0.2s, background 0.2s;
+}
+
+.home-button:hover {
+  background: #5735c8;
+  transform: translateY(-3px);
+}
+
+.home-button:focus-visible {
+  outline: 3px solid #bbaaff;
+  outline-offset: 4px;
+}
+
+.home-button span {
+  font-size: 19px;
+}
+
+.footer-text {
+  margin-top: 28px;
+  color: #9692a9;
+  font-size: 12px;
+}
+
+@media (max-width: 480px) {
+  .error-container {
+    padding: 32px 19px;
+  }
+
+  .illustration {
+    transform: scale(0.9);
+    margin-bottom: 5px;
+  }
+
+  .message {
+    font-size: 14px;
+  }
+}
